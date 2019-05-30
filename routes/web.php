@@ -11,20 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    $tasks = [
-        'Go to the store',
-        'Go to the market',
-        'Go to the work',
-        'Go to the concert'
-    ];
+Route::get('/', 'PagesController@home');
 
-
-    return view('welcome', [
-        'tasks' => $tasks,
-        'foo' => 'Foobar'
-    ]);
-});
+// Route::get('/', function() {
+//     return view('welcome', [
+//         'foo' => 'bar'
+//     ]);
+// });
 
 Route::get('/contact', function () {
     return view('contact');
